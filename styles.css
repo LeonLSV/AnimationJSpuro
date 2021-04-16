@@ -1,0 +1,73 @@
+.container {
+  overflow: hidden;
+}
+
+h2,
+h1,
+h3,
+h4 {
+  opacity: 0;
+}
+
+h2.animationEntrada {
+  animation-name: animationDesplazoR;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  color: red;
+}
+h1.animationDesplazaR {
+  animation-name: animationEntrada;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  color: green;
+}
+h3.animationDesplazaL {
+  animation-name: animationDesplazoL;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  color: yellow;
+}
+
+@keyframes animationEntrada {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes animationDesplazoR {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes animationDesplazoL {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+nav {
+  visibility: hidden;
+}
+.navbarfixed {
+  visibility: visible;
+  display: flex;
+  background: red;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
